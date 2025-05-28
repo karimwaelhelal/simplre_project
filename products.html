@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch Store - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Primary navigation">
+        <div class="logo" aria-label="Etch Store Logo">Etch Store</div>
+        <ul class="nav-links" role="menubar">
+            <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+            <li role="none"><a href="products.html" class="active" role="menuitem" aria-current="page">Products</a></li>
+            <li role="none"><a href="cart.html" role="menuitem">Cart</a></li>
+            <li role="none"><a href="login.html" role="menuitem">Login</a></li>
+            <li role="none"><a href="signup.html" role="menuitem">Sign Up</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="cart.html" class="cart-icon" role="menuitem" aria-label="Shopping Cart">
+                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                <span id="cart-count" aria-live="polite" aria-atomic="true">0</span>
+            </a>
+            <a href="#" onclick="logout()" class="logout-btn" role="menuitem" aria-label="Logout">Logout</a>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">Dark Mode</button>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products" aria-label="Products Section">
+        <h2></h2>
+        <div class="filter">
+           
+            </select>
+        </div>
+        <div class="product-grid" id="product-grid">
+            <div class="product-card" data-season="all-season">
+                <img src="Tshirt/1.jpg" alt="Midnight Black Pants">
+                <h3>Pull & Bear</h3>
+                <p>Price: 500 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 10</p>
+                <button onclick="addToCart('Midnight Black Pants', 350)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="summer">
+                <img src="Tshirt/2.jpg" alt="Denim Blue Shorts">
+                <h3>Pull & Bear</h3>
+                <p>Price: 500 EGP</p>
+                <p class="tag">Summer</p>
+                <p class="sold-count">Sold: 5</p>
+                <button onclick="addToCart('Denim Blue Shorts', 180)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="all-season">
+                <img src="Tshirt/3.jpg" alt="Classic White Sneakers">
+                <h3>Pull & Bear</h3>
+                <p>Price: 500 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 15</p>
+                <button onclick="addToCart('Classic White Sneakers', 450)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="all-season">
+                <img src="Tshirt/4.jpg" alt="Crew Socks Pack (5 Pairs)">
+                <h3>Pull & Bear</h3>
+                <p>Price: 500 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 20</p>
+                <button onclick="addToCart('Crew Socks Pack (5 Pairs)', 120)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="winter">
+                <img src="Tshirt/5.jpg" alt="Slate Gray Sweatpants">
+                <h3>Pull & Bear</h3>
+                <p>Price: 500 EGP</p>
+                <p class="tag">Winter</p>
+                <p class="sold-count">Sold: 8</p>
+                <button onclick="addToCart('Slate Gray Sweatpants', 300)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="all-season">
+                <img src="Tshirt/6.jpg" alt="Boxer Briefs Pack (3 Pairs)">
+                <h3>Zara</h3>
+                <p>Price: 150 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 12</p>
+                <button onclick="addToCart('Boxer Briefs Pack (3 Pairs)', 150)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="winter">
+                <img src="Tshirt/7.jpg" alt="Midnight Black Hoodie">
+                <h3>Zara</h3>
+                <p>Price: 400 EGP</p>
+                <p class="tag">Winter</p>
+                <p class="sold-count">Sold: 7</p>
+                <button onclick="addToCart('Midnight Black Hoodie', 400)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="summer">
+                <img src="Tshirt/8.jpg" alt="Graphic Street Tee">
+                <h3>Zara</h3>
+                <p>Price: 220 EGP</p>
+                <p class="tag">Summer</p>
+                <p class="sold-count">Sold: 18</p>
+                <button onclick="addToCart('Graphic Street Tee', 220)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="winter">
+                <img src="Tshirt/9.jpg" alt="Classic Leather Jacket">
+                <h3>Zara</h3>
+                <p>Price: 600 EGP</p>
+                <p class="tag">Winter</p>
+                <p class="sold-count">Sold: 3</p>
+                <button onclick="addToCart('Classic Leather Jacket', 600)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="winter">
+                <img src="Tshirt/10.jpg" alt="Denim Urban Jacket">
+                <h3>Zara</h3>
+                <p>Price: 550 EGP</p>
+                <p class="tag">Winter</p>
+                <p class="sold-count">Sold: 4</p>
+                <button onclick="addToCart('Denim Urban Jacket', 550)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="summer">
+                <img src="Tshirt/11.jpg" alt="Lightweight Summer Tee">
+                <h3>Pull & Bear</h3>
+                <p>Price: 200 EGP</p>
+                <p class="tag">Summer</p>
+                <p class="sold-count">Sold: 9</p>
+                <button onclick="addToCart('Lightweight Summer Tee', 200)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="all-season">
+                <img src="Tshirt/12.jpg" alt="Casual Sneakers">
+                <h3>Defacto</h3>
+                <p>Price: 400 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 11</p>
+                <button onclick="addToCart('Casual Sneakers', 400)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="winter">
+                <img src="Tshirt/13.jpg" alt="Wool Scarf">
+                <h3>Zara</h3>
+                <p>Price: 150 EGP</p>
+                <p class="tag">Winter</p>
+                <p class="sold-count">Sold: 6</p>
+                <button onclick="addToCart('Wool Scarf', 150)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="summer">
+                <img src="Tshirt/14.jpg" alt="Beach Sandals">
+                <h3>Pull & Bear</h3>
+                <p>Price: 100 EGP</p>
+                <p class="tag">Summer</p>
+                <p class="sold-count">Sold: 14</p>
+                <button onclick="addToCart('Beach Sandals', 100)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-season="all-season">
+                <img src="Tshirt/15.jpg" alt="Leather Belt">
+                <h3>Pull & Beart</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+             <div class="product-card" data-season="all-season">
+                <img src="Tshirt/16.jpg" alt="Leather Belt">
+                <h3>Defacto</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/17.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/18.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+             <div class="product-card" data-season="all-season">
+                <img src="Tshirt/15.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+             <div class="product-card" data-season="all-season">
+                <img src="Tshirt/16.jpg" alt="Leather Belt">
+                <h3>Zara</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+             <div class="product-card" data-season="all-season">
+                <img src="Tshirt/17.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+             <div class="product-card" data-season="all-season">
+                <img src="Tshirt/18.jpg" alt="Leather Belt">
+                <h3>Defacto</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/19.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+             <div class="product-card" data-season="all-season">
+                <img src="Tshirt/20.jpg" alt="Leather Belt">
+                <h3>Zara</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+             <div class="product-card" data-season="all-season">
+                <img src="Tshirt/21.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+             <div class="product-card" data-season="all-season">
+                <img src="Tshirt/22.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/23.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/24.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/25.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/26.jpg" alt="Leather Belt">
+                <h3>Defacto</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/27.jpg" alt="Leather Belt">
+                <h3>Zara</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/28.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/29.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/30.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/31.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div> <div class="product-card" data-season="all-season">
+                <img src="Tshirt/32.jpg" alt="Leather Belt">
+                <h3>Pull & Bear</h3>
+                <p>Price: 250 EGP</p>
+                <p class="tag">All-Season</p>
+                <p class="sold-count">Sold: 13</p>
+                <button onclick="addToCart('Leather Belt', 250)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Etch Store. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const button = document.querySelector('.dark-mode-toggle');
+            button.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+        }
+
+        // Basic JavaScript for functionality
+        function filterProducts() {
+            const season = document.getElementById("season-filter").value;
+            const cards = document.querySelectorAll(".product-card");
+            cards.forEach(card => {
+                if (season === "all" || card.getAttribute("data-season") === season) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        function addToCart(productName, price) {
+            alert(`${productName} added to cart for ${price} EGP!`);
+            let count = parseInt(document.getElementById("cart-count").textContent) + 1;
+            document.getElementById("cart-count").textContent = count;
+        }
+
+        function logout() {
+            alert("Logged out successfully!");
+            window.location.href = 'login.html';
+        }
+
+        function checkLogin() {
+            console.log("Checking login status...");
+        }
+
+        function updateCartCount() {
+            document.getElementById("cart-count").textContent = 0;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+            updateCartCount();
+            filterProducts();
+        });
+    </script>
+</body>
+</html>
